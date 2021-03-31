@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Monofett' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Homenaje">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Antic Slab">
+<style>
+body {
+  font-family: Antic Slab, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #f5f5f5;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Monofett', cursive;
+  text-align: center;
+  font-size: 95px;
+  color: #3fb0ac;
+  margin: 60px 0 0 0;
+}
+h2 {
+  font-family: 'Homenaje', sans-serif;
+  text-align: center;
+  color: #F2A74B;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.sketch{
+  background-image: url("https://i.imgur.com/WCtEM7x.png");
+}
+.flat{
+  background-image: url("https://i.imgur.com/VwbkxHh.png");
+}
+.painting{
+  background-image: url("https://i.imgur.com/olX1sWs.png");
+}
+.pixelsprite{
+  background-image: url("https://i.imgur.com/B2ekPaw.png");
+}
+.pixelpaint{
+  background-image: url("https://i.imgur.com/O4kEUqO.png");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 40px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 15px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 14px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Commissions</h1>
+<h2>Click each style below to find out more.</h2>
+<div class="sketch">
+  <p>SKETCH <span class="price">$20+</span><br />
+  <small>PICK ONE: bust:+$0 / waist up: +$10 / full body: +$10<br />
+  PICK ANY: traditional: +$5. add another character: double total price. background: +$5-$40 (based on complexity.)</small>
+  </p>
+</div>
+
+<div class="flat">
+  <p>BASIC COLOR <span class="price">$40+</span><br />
+  <small>PICK ONE: bust:+$0 / waist up: +$10 / full body: +$20<br />
+  PICK ANY: traditional: +$10. add another character: double total price. background: +$10-$60 (based on complexity.)</small></p>
+</div>
+  
+<div class="painting">
+  <p>PAINTING <span class="price">$60+</span><br />
+  <small>PICK ONE: bust:+$0 / waist up: +$30 / full body: +$60<br />
+  PICK ANY: traditional: +$20. add another character: double total price. background: +$20-$80 (based on complexity.)</small></p>
+</div>
+
+<div class="pixelsprite">
+  <p>PIXEL SPRITE <span class="price">$20+</span><br />
+  <small>PICK ONE: small:+$0 / medium: +$20 / large: +$40<br />
+  PICK ANY: add another character: double total price. animation: +$5-$80 (based on complexity)</small></p>
+</div>
+
+<div class="pixelpaint">
+  <p>PIXEL PAINTING <span class="price">$40+</span><br />
+  <small>PICK ONE: small:+$0 / medium: +$30 / large: +$60<br />
+  PICK ANY: add another character: double total price. animation: +$5-$80 (based on complexity)</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
